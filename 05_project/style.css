@@ -199,8 +199,8 @@ button:hover {
     height: 100%;
     width: 100%;
   }
-  .nav i{
-    transition: all 0.5s ;
+  #menuList{
+    transition: all 0.3s ease-in-out ;
   }
 }
 
