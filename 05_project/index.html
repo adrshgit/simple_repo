@@ -4,41 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <title>responsive web page</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="shortcut icon" href="logo.svg" type="image/x-icon">
+    <title>CodexLab</title>
   </head>
   <body>
     <div class="main">
       <div class="nav">
-        <a href="#"><h2>Code<span>x</span>Lab</h2></a>
-        <div class="nav-part2">
+        <a href="./" class="logo">CodexLab</a>
           <ul id="menuList">
-            <li><a href="#home">Home</a></li>
+            <li><a href="./">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Course</a></li>
-            <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
-            <button>Sign In</button>
+            <li><a href="#course">Course</a></li>
+            <li><a href="form.html">Form</a></li>
           </ul>
-          <div>
-            <i class="ri-menu-3-line" onclick="toggleMenu()"></i>
+          <div class="nav-right">
+            <button>Sign in</button>
+            <button>login</button>
+            <img src="sun-fill.png" id="icon" alt="">
+            <script>
+              let icon = document.getElementById("icon");
+              icon.onclick = () => {
+                document.body.classList.toggle("dark-theme");
+                if (document.body.classList.contains("dark-theme")) {
+                  icon.src = "moon-fill.png";
+                } else {
+                  icon.src = "sun-fill.png";
+                };
+              };
+            </script>
+            <div class="icon">
+              <i class="ri-menu-line" onclick="toggleMenu()"></i>
+              <i class="ri-close-large-line" id="close" onclick="toggleMenu()"></i>
           </div>
           <script>
             let menuList = document.getElementById("menuList");
             menuList.style.maxHeight = "0px";
             function toggleMenu() {
               if (menuList.style.maxHeight == "0px") {
-                menuList.style.maxHeight = "350px";
+                menuList.style.maxHeight = "400px"
+                document.querySelector(".ri-menu-line").style.display = "none";
+                document.querySelector(".ri-close-large-line").style.display = "block";
               } else {
-                menuList.style.maxHeight = "0px";
+                menuList.style.maxHeight = "0px"
+                document.querySelector(".ri-menu-line").style.display = "block";
+                document.querySelector(".ri-close-large-line").style.display = "none";;
               }
             }
           </script>
-        </div>
-
+         </div>
       </div>
       <div class="content">
         <div class="left">
@@ -51,5 +66,9 @@
         </div>
       </div>
     </div>
+    <footer>
+      <a href="https://github.com/codexadarsh"> Developed by Adarsh</a>
+      <p>Copyright &copy; 2024 CodexLab. All rights reserved</p>
+    </footer>
   </body>
 </html>
