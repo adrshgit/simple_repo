@@ -3,27 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Example</title>
-  <link rel="stylesheet" href="styles.css">
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+  <title>Macropad</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Login Button -->
-  <button id="loginBtn">Login</button>
-
-  <!-- Login Form (Initially Hidden) -->
-  <div id="loginForm" class="hidden">
-    <form id="loginFormElement">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
-      <br>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-      <br>
-      <button type="submit">Submit</button>
-      <button type="button" id="cancelBtn">Cancel</button>
-    </form>
+  <div class="header">
+    <a href="./">Macropad</a>
+    <a href=""><i class="ri-menu-line"></i></a>
   </div>
-
+<div class="content">
+  <div class="body">
+    <div class="macropad">
+    <input type="text" placeholder="macropad" id="display" readonly>
+<div class="wrap">
+  <button class="btn">
+      <span class="text">Volume</span>
+  </button>
+</div>
+<div class="buttons"></div>
+    <div class="button">1</div>
+    <div class="button">2</div>
+    <div class="button">3</div>
+    <div class="button">4</div>
+    <div class="button">5</div>
+    <div class="button">6</div>
+    <div class="button">7</div>
+    <div class="button">8</div>
+    <div class="button">9</div>
+  </div>
+ </div>
+  <section class="info">
+    <div class="keys">
+      <label for="shortcut">Create Your Shortcut Key</label>
+      <input type="text" placeholder="Enter Your shortcut" id="shortcut">
+      <button id="submitButton">Save</button>
+    </div>
+  </section>
+</div>
+<button class="save">?</button>
+<section class="sk">
+  <h3>Shortcut Keys</h3>
+  <!-- <ul id="shortcuts"></ul> -->
+</section>
+<footer>
+  <p>&copy; 2025 Macropad</p>
+  <a href="https://github.com/codexadarsh">Made with ❤️ by Adarsh</a>
+</footer>
   <script src="script.js"></script>
 </body>
 </html>
